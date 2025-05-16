@@ -1,0 +1,118 @@
+链接：https://ac.nowcoder.com/acm/contest/81601/H
+来源：牛客网
+
+题目描述 
+In Genshin Impact, making wishes is an action trying to obtain some specific character.
+
+In this problem, there are four possible results for making wishes: 
+3
+3-star weapon, 
+4
+4-star weapon/character, 
+5
+5-star non-promotional weapon/character, 
+5
+5-star promotional weapon/character. Here, we do not distinguish between weapon and character, and we use 
+3
+3, 
+4
+4, 
+5
+5, and 
+�
+U to represent each result, respectively.
+
+There are some rules for making wishes.
+
+ For every consecutive 
+10
+10 wishes, it will not only contain 
+3
+3-star weapons.
+ For every consecutive 
+90
+90 wishes, it must contain at least one 
+5
+5-star weapon/character, no matter whether it is promotional.
+ For every two neighboring 
+5
+5-star weapons/characters, there must be at least one which is promotional. Here, two 
+5
+5-star weapons/characters are called neighboring if and only if all wishes between them are not 
+5
+5-star weapons/characters.
+
+Now you're given a list of wishes. Determine if it fits in the above rules.
+输入描述:
+The first line contains one integer 
+�
+T (
+1
+≤
+�
+≤
+1
+0
+5
+1≤T≤10 
+5
+ ), representing the number of test cases.
+
+For each test case, one single line contains a string 
+�
+S (
+1
+≤
+∣
+�
+∣
+≤
+1
+0
+6
+1≤∣S∣≤10 
+6
+ ), which only contains 
+3
+3, 
+4
+4, 
+5
+5, and 
+�
+U.
+
+It is guaranteed that 
+∑
+∣
+�
+∣
+≤
+1
+0
+6
+∑∣S∣≤10 
+6
+ .
+输出描述:
+For each test case, if it fits in the above rules, output "
+valid
+valid", otherwise output "
+invalid
+invalid".
+示例1
+输入
+复制
+5
+433333333334
+34343453434
+333335333335
+UUUUUUUUUU
+5U5U5U5U5U4
+输出
+复制
+invalid
+valid
+invalid
+valid
+valid
